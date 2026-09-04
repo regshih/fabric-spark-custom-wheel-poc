@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fabric-spark-custom-wheel-poc"
+version = "0.1.0"
+description = "Automation for validating custom Python wheels on Microsoft Fabric Spark"
+requires-python = ">=3.11"
+dependencies = [
+  "azure-identity>=1.17,<2",
+  "python-dotenv>=1.0,<2",
+  "pyodbc>=5.1,<6",
+  "PyYAML>=6.0,<7",
+  "requests>=2.32,<3",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+extend-exclude = ["notebooks"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]

@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fabric-custom-wheel-sample"
+version = "0.1.0"
+description = "Dependency-free sample wheel for Microsoft Fabric Spark distribution testing"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{name = "Fabric Custom Wheel POC contributors"}]
+dependencies = []
+
+[tool.setuptools.packages.find]
+where = ["src"]

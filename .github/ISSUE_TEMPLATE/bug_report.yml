@@ -1,0 +1,27 @@
+name: Bug report
+description: Report a reproducible problem
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Describe the problem without credentials or tenant-specific identifiers.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction steps
+    validations:
+      required: true
+  - type: input
+    id: runtime
+    attributes:
+      label: Fabric runtime and local Python version
+  - type: textarea
+    id: metadata
+    attributes:
+      label: Sanitized wheel metadata and error
+      description: Never attach proprietary wheels, tokens, IDs, or customer data.
