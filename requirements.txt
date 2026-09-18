@@ -1,5 +1,5 @@
 azure-identity>=1.17,<2
-build>=1.2,<2
+build>=1.6.1,<2
 python-dotenv>=1.0,<2
 pyodbc>=5.1,<6
 PyYAML>=6.0,<7
